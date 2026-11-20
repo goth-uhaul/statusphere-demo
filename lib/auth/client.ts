@@ -12,7 +12,7 @@ import type {
 } from "@atproto/oauth-client-node";
 import { getDb } from "../db";
 
-export const SCOPE = "atproto";
+export const SCOPE = "atproto repo:xyz.statusphere.status";
 
 let client: NodeOAuthClient | null = null;
 
