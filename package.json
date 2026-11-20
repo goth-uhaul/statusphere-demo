@@ -1,0 +1,38 @@
+{
+  "name": "statusphere-demo",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "22.x"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm migrate && next dev",
+    "build": "next build",
+    "start": "pnpm migrate && next start",
+    "lint": "eslint",
+    "migrate": "tsx scripts/migrate.ts",
+    "gen-key": "tsx scripts/gen-key.ts"
+  },
+  "dependencies": {
+    "@atproto/oauth-client-node": "^0.5.17",
+    "better-sqlite3": "^13.2.0",
+    "kysely": "^0.29.9",
+    "next": "16.4.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "4.3.3",
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.6",
+    "tailwindcss": "4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@12.18.0"
+}
