@@ -10,11 +10,26 @@ type $nsid = typeof $nsid;
 
 export { $nsid };
 
-type Main = { $type: "xyz.statusphere.status";"status":string;"createdAt":l.DatetimeString };
+type Main = {
+  $type: "xyz.statusphere.status";
+  status: string;
+  createdAt: l.DatetimeString;
+};
 
 export type { Main };
 
-const main = /*#__PURE__*/ l.record<"tid", Main>("tid", $nsid, /*#__PURE__*/ l.object({"status":/*#__PURE__*/ l.string({"maxLength":32,"minLength":1,"maxGraphemes":1}),"createdAt":/*#__PURE__*/ l.string({"format":"datetime"})}));
+const main = /*#__PURE__*/ l.record<"tid", Main>(
+  "tid",
+  $nsid,
+  /*#__PURE__*/ l.object({
+    status: /*#__PURE__*/ l.string({
+      maxLength: 32,
+      minLength: 1,
+      maxGraphemes: 1,
+    }),
+    createdAt: /*#__PURE__*/ l.string({ format: "datetime" }),
+  }),
+);
 
 export { main };
 
